@@ -6,6 +6,7 @@ using CriarPessoa.Infra.Data;
 
 namespace CriarPessoa
 {
+    //teste
     [TestClass]
     public class EnderecoDomainTest
     {

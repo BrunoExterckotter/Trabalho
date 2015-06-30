@@ -57,7 +57,7 @@ namespace CriarPessoa
         {
             //Arrange
             IEnderecoRepository repository = new EnderecoRepository();
-            Pessoa pessoa = _contextForTest.Pessoas.Find(2);
+            Pessoa pessoa = _contextForTest.Pessoas.Find(1);
             pessoa.Nome = "Teste";
             pessoa.DataNascimento = new DateTime(1970, 06, 01, 0, 0, 0);
             pessoa.Cpf = "902901920192";
@@ -86,11 +86,6 @@ namespace CriarPessoa
             Assert.AreEqual(updatedEndereco.Pessoa, persistedEndereco.Pessoa);
 
 
-            //Assert - utilizando o Framework FluentAssertions
-            //Apenas um exemplo didático (NÃO CAI NA PROVA)
-            // updatedBlog.Should().NotBeNull();
-            //updatedBlog.ShouldBeEquivalentTo(persistedBlog);
-
         }
 
         [TestMethod]
@@ -107,9 +102,6 @@ namespace CriarPessoa
             var persistedEndereco = _contextForTest.Enderecos.Find(1);
             Assert.IsNull(persistedEndereco);
 
-            //Assert - utilizando o Framework FluentAssertions
-            //Apenas um exemplo didático (NÃO CAI NA PROVA)
-            //persistedPost.Should().BeNull();
         }
 
 

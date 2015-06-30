@@ -93,10 +93,5 @@ namespace CriarPessoa
             Assert.IsNull(pessoaFake);
         }
 
-        
-       
-
-
-
     }
 }
